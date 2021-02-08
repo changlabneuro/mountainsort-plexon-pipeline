@@ -31,10 +31,10 @@ for new_file_ind = 1:numel( new_spiketimes )
   else
     extracted_spike_info{end+1} = make_spike_info();
     old_file_data = get_old_units_data( old_spikedata, old_file_ind );
-    extracted_spike_info.old_units_data = old_file_data;
-    extracted_spike_info.num_old_units = numel( old_file_data );
-    extracted_spike_info.new_units_data = new_file_data;
-    extracted_spike_info.num_new_units = numel( new_file_data );
+    extracted_spike_info{end}.old_units_data = old_file_data;
+    extracted_spike_info{end}.num_old_units = numel( old_file_data );
+    extracted_spike_info{end}.new_units_data = new_file_data;
+    extracted_spike_info{end}.num_new_units = numel( new_file_data );
   end
 end
 

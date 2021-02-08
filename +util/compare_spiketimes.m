@@ -11,7 +11,7 @@ function extracted_spike_info = compare_spiketimes(old_spiketimes, ...
 % %
 
 extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
-unit_diff_pre_file = get_unit_difference( extracted_spike_info );
+unit_diff_per_file = get_unit_difference( extracted_spike_info );
 
 end
 
@@ -40,12 +40,12 @@ end
 
 end
 
-function unit_diff_pre_file =  get_unit_difference(extracted_spike_info)
+function unit_diff_per_file =  get_unit_difference(extracted_spike_info)
 
-num_units_per_file_new = [ extracted_spike_info{1:end}.num_old_units ];
+num_units_per_file_old = [ extracted_spike_info{1:end}.num_old_units ];
 num_units_per_file_new = [ extracted_spike_info{1:end}.num_new_units ];
 
-unit_diff_pre_file = num_units_per_file_new - num_units_per_file_new;
+unit_diff_per_file = num_units_per_file_new - num_units_per_file_old;
 
 end
 

@@ -14,7 +14,13 @@ output = struct();
 
 extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
 unit_diff_per_file = get_unit_difference( extracted_spike_info );
+spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info);
 isi_dist_z_test = compare_isi_distributions( extracted_spike_info );
+
+output.extracted_spike_info         = extracted_spike_info;
+output.unit_diff_per_file           = unit_diff_per_file;
+output.spike_ct_diff_per_file           = spike_ct_diff_per_file;
+output.isi_dist_z_test              = isi_dist_z_test;
 
 end
 
@@ -61,21 +67,57 @@ num_units_per_file_new = [ spike_info_array.num_new_units ];
 unit_diff_per_file = num_units_per_file_new - num_units_per_file_old;
 
 end
+function spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info)
 
+spike_ct_diff_per_file = {};
 
-function isi_dist_z_test = compare_isi_distributions( extracted_spike_info )
-
-old_units_data = extracted_spike_info.old_units_data;
-new_units_data = extracted_spike_info.new_units_data;
-
-for old_unit_ind = 1:numel(old_units_data)
-  for new_unit_ind = 1:numel(new_units_data)
+for file_ind = 1:numel(extracted_spike_info)
     
-    % Operations here
-    % Function to calculate ISI dist
+    file_ct_diff = {};
+
+    old_units_data = extracted_spike_info{file_ind}.old_units_data;
+    new_units_data = extracted_spike_info{file_ind}.new_units_data;
+
+    for new_unit_ind = 1:numel(new_units_data)
+        
+      new_unit_ct_diff = {};
+      for old_unit_ind = 1:numel(old_units_data)
+          old_unit_spike_ct = numel(old_units_data{old_unit_ind});
+          new_unit_spike_ct = numel(new_units_data{new_unit_ind});
+          new_unit_ct_diff{old_unit_ind} = new_unit_spike_ct - old_unit_spike_ct;
+      end
+      file_ct_diff{new_unit_ind} = new_unit_ct_diff;
+    end
+    spike_ct_diff_per_file{file_ind} = file_ct_diff;
+end
+
+
+end
+
+function isi_dist_z_test = compare_isi_distributions(extracted_spike_info)
+
+isi_dist_z_test = {};
+
+for file_ind = 1:numel(extracted_spike_info)
     
-  end
-  
+    file_z_test = {};
+
+    old_units_data = extracted_spike_info{file_ind}.old_units_data;
+    new_units_data = extracted_spike_info{file_ind}.new_units_data;
+
+    for new_unit_ind = 1:numel(new_units_data)
+        
+      new_unit_test = {};
+      for old_unit_ind = 1:numel(old_units_data)
+          old_unit_isi_dist = diff(old_units_data{old_unit_ind});
+          new_unit_isi_dist = diff(new_units_data{new_unit_ind});
+          [h, p] = ttest2(old_unit_isi_dist, new_unit_isi_dist);
+          new_unit_test{old_unit_ind} = {h, p};
+      end
+      file_z_test{new_unit_ind} = new_unit_test;
+
+    end
+    isi_dist_z_test{file_ind} = file_z_test;
 end
 
 end

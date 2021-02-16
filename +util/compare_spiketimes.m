@@ -19,7 +19,10 @@ isi_dist_z_test = compare_isi_distributions( extracted_spike_info );
 
 output.extracted_spike_info         = extracted_spike_info;
 output.unit_diff_per_file           = unit_diff_per_file;
+<<<<<<< HEAD
 output.spike_ct_diff_per_file           = spike_ct_diff_per_file;
+=======
+>>>>>>> fc29a2b2f3aabf0ff5ecd33efdb1df572febcc45
 output.isi_dist_z_test              = isi_dist_z_test;
 
 end

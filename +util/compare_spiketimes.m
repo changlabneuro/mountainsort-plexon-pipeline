@@ -16,6 +16,10 @@ extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
 unit_diff_per_file = get_unit_difference( extracted_spike_info );
 isi_dist_z_test = compare_isi_distributions( extracted_spike_info );
 
+output.extracted_spike_info         = extracted_spike_info;
+output.unit_diff_per_file           = unit_diff_per_file;
+output.isi_dist_z_test              = isi_dist_z_test;
+
 end
 
 function extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes )

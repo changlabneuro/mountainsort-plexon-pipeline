@@ -38,7 +38,7 @@ for new_file_ind = 1:numel( new_spiketimes.all_spiketimes )
   new_spikedata = new_spiketimes.all_spiketimes{new_file_ind}{1};
   sampling_rate = 40000;
   %   new_file_data = new_spikedata if using original sample number
-  new_file_data = get_adjusted_new_units_data(new_spikedata, sampling_rate);
+  new_file_data = get_adjusted_new_units_data(new_spikedata, sampling_rate );
   
   old_spikedata = old_spiketimes.all_spike_time;
   old_file_ind = find( strcmp( new_file_name, old_filename_list ) );
@@ -71,7 +71,6 @@ num_units_per_file_new = [ spike_info_array.num_new_units ];
 unit_diff_per_file = num_units_per_file_new - num_units_per_file_old;
 
 end
-
 function spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info)
 
 spike_ct_diff_per_file = {};

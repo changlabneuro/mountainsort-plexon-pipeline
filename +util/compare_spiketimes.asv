@@ -35,9 +35,7 @@ end
 
 for new_file_ind = 1:numel( new_spiketimes.all_spiketimes )
   new_file_name = new_spiketimes.all_spiketimes{new_file_ind}{2};
-  new_spikedata = new_spiketimes.all_spiketimes{new_file_ind}{1};
-  %   new_file_data = new_spikedata if using original sample number
-  new_file_data = get_adjusted_new_units_data(new_spikedata);
+  new_file_data = new_spiketimes.all_spiketimes{new_file_ind}{1};
   
   old_spikedata = old_spiketimes.all_spike_time;
   old_file_ind = find( strcmp( new_file_name, old_filename_list ) );
@@ -134,10 +132,10 @@ extracted_spike_info.num_new_units = nan;
 
 end
 
-function new_file_data = get_adjusted_new_units_data(new_spikedata)
-new_file_data = {};
+function new_units_data = get_adjusted_new_units_data(new_spikedata)
+new_units_data = {}
     for unit = 1:numel(new_spikedata)
-        new_file_data{unit} = new_spikedata{unit}/400000;
+        new_units_data{unit} = new_spikedata{unit}/400000
     end
 end
 

@@ -23,10 +23,10 @@ end
 
 function plot_isi_dist_comp(spike_compare)
 
-if ~exist('spike_comp_plots', 'dir')
-  mkdir('spike_comp_plots');
+if ~exist('../spike_comp_plots', 'dir')
+  mkdir('../spike_comp_plots');
 end
-save_path = './spike_comp_plots/isi_dist_t_test/';
+save_path = '../spike_comp_plots/isi_dist_t_test/';
 isi_dist_t_test = spike_compare.isi_dist_t_test;
 spike_info = spike_compare.extracted_spike_info;
 
@@ -59,7 +59,7 @@ for file_ind = 1:numel(isi_dist_t_test)
   xlabel('New Unit Number');
   ylabel('Old Unit Number');
   
-  suptitle(['ISI dist comp | t-test | ' spike_info{file_ind}.filename]);
+  title(['ISI dist comp | t-test | ' spike_info{file_ind}.filename]);
   
   plot_filename = [save_path 'isi_dist_t_test-' spike_info{file_ind}.filename '.pdf'];
   saveas(gcf, plot_filename);

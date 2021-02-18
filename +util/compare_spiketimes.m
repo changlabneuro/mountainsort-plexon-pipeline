@@ -1,4 +1,4 @@
-function output = compare_spiketimes(old_spiketimes, ...
+function spike_compare = compare_spiketimes(old_spiketimes, ...
   new_spiketimes)
 
 % Function to compare information between the newly sorted units through
@@ -10,17 +10,17 @@ function output = compare_spiketimes(old_spiketimes, ...
 % % Feb 04, 2021 - Script made | Prabaha
 % %
 
-output = struct();
+spike_compare = struct();
 
 extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
 unit_diff_per_file = get_unit_difference( extracted_spike_info );
 spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info);
-isi_dist_z_test = compare_isi_distributions( extracted_spike_info );
+isi_dist_t_test = compare_isi_dist_t_test( extracted_spike_info );
 
-output.extracted_spike_info         = extracted_spike_info;
-output.unit_diff_per_file           = unit_diff_per_file;
-output.spike_ct_diff_per_file           = spike_ct_diff_per_file;
-output.isi_dist_z_test              = isi_dist_z_test;
+spike_compare.extracted_spike_info         = extracted_spike_info;
+spike_compare.unit_diff_per_file           = unit_diff_per_file;
+spike_compare.spike_ct_diff_per_file       = spike_ct_diff_per_file;
+spike_compare.isi_dist_t_test              = isi_dist_t_test;
 
 end
 
@@ -94,9 +94,9 @@ end
 
 end
 
-function isi_dist_z_test = compare_isi_distributions(extracted_spike_info)
+function isi_dist_t_test = compare_isi_dist_t_test(extracted_spike_info)
 
-isi_dist_z_test = {};
+isi_dist_t_test = {};
 
 for file_ind = 1:numel(extracted_spike_info)
     
@@ -104,20 +104,18 @@ for file_ind = 1:numel(extracted_spike_info)
 
     old_units_data = extracted_spike_info{file_ind}.old_units_data;
     new_units_data = extracted_spike_info{file_ind}.new_units_data;
-
+    unit_comp_p = [];
+    unit_comp_h = [];
     for new_unit_ind = 1:numel(new_units_data)
-        
-      new_unit_test = {};
       for old_unit_ind = 1:numel(old_units_data)
           old_unit_isi_dist = diff(old_units_data{old_unit_ind});
           new_unit_isi_dist = diff(new_units_data{new_unit_ind});
           [h, p] = ttest2(old_unit_isi_dist, new_unit_isi_dist);
-          new_unit_test{old_unit_ind} = {h, p};
+          unit_comp_p(old_unit_ind, new_unit_ind) = p;
+          unit_comp_h(old_unit_ind, new_unit_ind) = h;
       end
-      file_z_test{new_unit_ind} = new_unit_test;
-
     end
-    isi_dist_z_test{file_ind} = file_z_test;
+    isi_dist_t_test{file_ind} = {unit_comp_h, unit_comp_p};
 end
 
 end

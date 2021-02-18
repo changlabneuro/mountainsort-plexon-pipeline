@@ -59,7 +59,7 @@ for file_ind = 1:numel(isi_dist_t_test)
   xlabel('New Unit Number');
   ylabel('Old Unit Number');
   
-  suptitle(['ISI dist comp | t-test | ' spike_info{file_ind}.filename]);
+  title(['ISI dist comp | t-test | ' spike_info{file_ind}.filename]);
   
   plot_filename = [save_path 'isi_dist_t_test-' spike_info{file_ind}.filename '.pdf'];
   saveas(gcf, plot_filename);

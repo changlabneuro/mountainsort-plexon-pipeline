@@ -1,5 +1,15 @@
 function generate_spike_comparison_plots(old_spiketimes, new_spiketimes)
 
+% Function to generate plots comparing information between the newly sorted 
+% units through mountainsort4 compared to the previously sorted units in 
+% mountainsort3
+%
+%
+% Edit history:
+% -------------
+% % Feb 17, 2021 - Script made (just t-test) | Prabaha
+% %
+
 if nargin < 1
   old_spiketimes = load('dictator_game_SUAdata_pre.mat');
   new_spiketimes = load('ml4alg_brains_spiketimes_2021.mat');

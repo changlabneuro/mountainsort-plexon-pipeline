@@ -24,7 +24,7 @@ end
 function plot_isi_dist_comp(spike_compare)
 
 if ~exist('spike_comp_plots', 'dir')
-  mkdir('spike_comp_plots');
+   mkdir('spike_comp_plots');
 end
 save_path = './spike_comp_plots/isi_dist_t_test/';
 isi_dist_t_test = spike_compare.isi_dist_t_test;
@@ -50,7 +50,8 @@ for file_ind = 1:numel(isi_dist_t_test)
   colormap autumn;
   colorbar;
   for old_unit_ind = 1:size( p_mat, 1 )
-    for new_unit_ind = 1:size( p_mat, 2 )
+    for new_ind = 1:size( p_mat, 2 )
+      new_unit_ind = spike_info{file_ind}.new_units_data.unit_list{new_ind};
       text(new_unit_ind, old_unit_ind, num2str(p_mat(old_unit_ind,new_unit_ind),2), ...
         'FontSize', 7);
     end

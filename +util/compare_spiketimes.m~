@@ -16,13 +16,11 @@ extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
 unit_diff_per_file = get_unit_difference( extracted_spike_info );
 spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info);
 isi_dist_t_test = compare_isi_dist_t_test( extracted_spike_info );
-diff_between_spikes = find_diff_between_spikes(extracted_spike_info);
 
 spike_compare.extracted_spike_info         = extracted_spike_info;
 spike_compare.unit_diff_per_file           = unit_diff_per_file;
 spike_compare.spike_ct_diff_per_file       = spike_ct_diff_per_file;
 spike_compare.isi_dist_t_test              = isi_dist_t_test;
-spike_compare.diff_between_spikes              = diff_between_spikes;
 
 end
 
@@ -38,8 +36,9 @@ end
 for new_file_ind = 1:numel( new_spiketimes.all_spiketimes )
   new_file_name = new_spiketimes.all_spiketimes{new_file_ind}{2};
   new_spikedata = new_spiketimes.all_spiketimes{new_file_ind}{1};
+  sampling_rate = 40000;
   %   new_file_data = new_spikedata if using original sample number
-  new_file_data = get_adjusted_new_units_data(new_spikedata, sampling_rate);
+  new_file_data = get_adjusted_new_units_data(new_spikedata, sampling_rate );
   
   old_spikedata = old_spiketimes.all_spike_time;
   old_file_ind = find( strcmp( new_file_name, old_filename_list ) );
@@ -72,7 +71,6 @@ num_units_per_file_new = [ spike_info_array.num_new_units ];
 unit_diff_per_file = num_units_per_file_new - num_units_per_file_old;
 
 end
-
 function spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info)
 
 spike_ct_diff_per_file = {};
@@ -82,7 +80,7 @@ for file_ind = 1:numel(extracted_spike_info)
     file_ct_diff = {};
 
     old_units_data = extracted_spike_info{file_ind}.old_units_data;
-    new_units_data = extracted_spike_info{file_ind}.new_units_data.data;
+    new_units_data = extracted_spike_info{file_ind}.new_units_data;
 
     for new_unit_ind = 1:numel(new_units_data)
         
@@ -109,7 +107,7 @@ for file_ind = 1:numel(extracted_spike_info)
     file_z_test = {};
 
     old_units_data = extracted_spike_info{file_ind}.old_units_data;
-    new_units_data = extracted_spike_info{file_ind}.new_units_data.data;
+    new_units_data = extracted_spike_info{file_ind}.new_units_data;
     unit_comp_p = [];
     unit_comp_h = [];
     for new_unit_ind = 1:numel(new_units_data)
@@ -137,90 +135,26 @@ extracted_spike_info.num_new_units = nan;
 
 end
 
-function new_data = get_adjusted_new_units_data(new_spikedata, sampling_rate)
+function new_file_data = get_adjusted_new_units_data(new_spikedata, sampling_rate)
 
 if nargin < 2
   sampling_rate = 40000;
 end
-new_data = struct();
 new_file_data = {};
-spike_ct = [];
 for unit = 1:numel(new_spikedata)
-    spike_ct(unit) = numel(new_spikedata{unit});
+  new_file_data{unit} = new_spikedata{unit}/sampling_rate;
 end
-sorted_spike_ct = sort(spike_ct);
-sorted_unit_id = {};
-for unit = 1:numel(new_spikedata)
-    
-    idx = find(spike_ct == sorted_spike_ct(unit));
-    sorted_unit_id{unit} = idx(1);
-    new_file_data{unit} = new_spikedata{idx(1)} / sampling_rate;
-end
-new_data.unit_list = sorted_unit_id;
-new_data.data = new_file_data;
 
 end
+
 
 
 function old_units_data = get_old_units_data(old_spikedata, old_file_ind)
-
-
 old_units_data = {};
 
 old_units_cellarray = old_spikedata{old_file_ind}.data;
-
-spike_ct = [];
 for unit = 1:numel(old_units_cellarray)
-    spike_ct(unit) = numel(old_units_cellarray{unit}.data);
+  old_units_data{unit} = old_units_cellarray{unit}.data;
 end
-sorted_spike_ct = sort(spike_ct);
-
-for unit = 1:numel(old_units_cellarray)
-    idx = find(spike_ct == sorted_spike_ct(unit));
-    old_units_data{unit} = old_units_cellarray{idx}.data;
-end
-
-end
-
-function diff_between_spikes = find_diff_between_spikes(extracted_spike_info)
-
-diff_between_spikes = {};
-
-for file_ind = 1:numel(extracted_spike_info)
-
-    old_units_data = extracted_spike_info{file_ind}.old_units_data;
-    new_units_data = extracted_spike_info{file_ind}.new_units_data.data;
-    unit_comp = {};
-    for new_unit_ind = 1:numel(new_units_data)
-      for old_unit_ind = 1:numel(old_units_data)
-          old_unit = old_units_data{old_unit_ind};
-          new_unit = new_units_data{new_unit_ind};
-          difference_closest = find_diff_with_closest_unit(old_unit, new_unit);
-          unit_comp{old_unit_ind, new_unit_ind} = difference_closest;
-      end
-    end
-    diff_between_spikes{file_ind} = unit_comp;
-end
-
-end
-
-
-
-function difference_closest = find_diff_with_closest_unit(old_unit, new_unit)
-    last_spike_ind = 1;
-    difference_closest = [];
-    for new_spike_ind = 1:numel(new_unit)
-        min_diff = intmax;
-        for old_spike_ind = last_spike_ind : numel(old_unit)
-            diff_spikes = new_unit(new_spike_ind) - old_unit(old_spike_ind);
-            if diff_spikes < min_diff
-                min_diff = diff_spikes;
-                last_spike_ind = old_spike_ind;
-            else
-                break   
-            end 
-        end
-        difference_closest(new_spike_ind) = min_diff;
-    end
 
 end

@@ -10,7 +10,7 @@ function generate_spike_comparison_plots(old_spiketimes, new_spiketimes)
 % % Feb 17, 2021 - Script made (just t-test) | Prabaha
 % %
 
-if nargin < 1
+if nargin < 2
   old_spiketimes = load('dictator_game_SUAdata_pre.mat');
   new_spiketimes = load('ml4alg_brains_spiketimes_2021.mat');
 end

@@ -1,5 +1,5 @@
 function spike_compare = compare_spiketimes(old_spiketimes, ...
-  new_spiketimes)
+  new_spiketimes, sampling_rate)
 
 % Function to compare information between the newly sorted units through
 % mountainsort4 compared to the previously sorted units in mountainsort3
@@ -12,7 +12,7 @@ function spike_compare = compare_spiketimes(old_spiketimes, ...
 
 spike_compare = struct();
 
-extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes );
+extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes, sampling_rate );
 unit_diff_per_file = get_unit_difference( extracted_spike_info );
 spike_ct_diff_per_file = get_spike_ct_difference(extracted_spike_info);
 isi_dist_t_test = compare_isi_dist_t_test( extracted_spike_info );
@@ -26,10 +26,12 @@ spike_compare.diff_between_spikes              = diff_between_spikes;
 
 end
 
-function extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes )
+function extracted_spike_info = extract_spike_info( old_spiketimes, new_spiketimes, sampling_rate)
 
 old_filename_list = {};
 extracted_spike_info = {};
+
+
 
 for old_file_ind = 1:numel( old_spiketimes.all_spike_time )
   old_filename_list{old_file_ind} = old_spiketimes.all_spike_time{old_file_ind}.filename{1}(1:end-4);
@@ -148,7 +150,7 @@ spike_ct = [];
 for unit = 1:numel(new_spikedata)
     spike_ct(unit) = numel(new_spikedata{unit});
 end
-sorted_spike_ct = sort(spike_ct);
+sorted_spike_ct = sort(spike_ct, 'descend');
 sorted_unit_id = {};
 for unit = 1:numel(new_spikedata)
     
@@ -173,7 +175,7 @@ spike_ct = [];
 for unit = 1:numel(old_units_cellarray)
     spike_ct(unit) = numel(old_units_cellarray{unit}.data);
 end
-sorted_spike_ct = sort(spike_ct);
+sorted_spike_ct = sort(spike_ct, 'descend');
 
 for unit = 1:numel(old_units_cellarray)
     idx = find(spike_ct == sorted_spike_ct(unit));
@@ -207,9 +209,15 @@ end
 
 
 function difference_closest = find_diff_with_closest_unit(old_unit, new_unit)
-    last_spike_ind = 1;
-    difference_closest = [];
-    for new_spike_ind = 1:numel(new_unit)
+  last_spike_ind = 1;
+  difference_closest = [];
+  start_new = new_unit(1);
+  end_new = new_unit(end);
+  start_old = old_unit(1);
+  end_old = old_unit(end);
+  if (start_new < start_old && end_new > start_old) ||...
+          (start_new > start_old && end_old > start_new)
+      for new_spike_ind = 1:numel(new_unit)
         min_diff = intmax;
         for old_spike_ind = last_spike_ind : numel(old_unit)
             diff_spikes = new_unit(new_spike_ind) - old_unit(old_spike_ind);
@@ -221,6 +229,8 @@ function difference_closest = find_diff_with_closest_unit(old_unit, new_unit)
             end 
         end
         difference_closest(new_spike_ind) = min_diff;
-    end
+      end
+  end
+    
 
 end

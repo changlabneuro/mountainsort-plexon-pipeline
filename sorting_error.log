@@ -1,0 +1,127 @@
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 204, in <module>
+    f.close()
+AttributeError: 'dict' object has no attribute 'close'
+ERROR:root:1_Hitch_01132017_OT
+Traceback (most recent call last):
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 158, in run
+    self._run(recording, self.output_folders[i])
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/mountainsort4/mountainsort4.py", line 107, in _run
+    sorting = ml_ms4alg.mountainsort4(
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/mountainsort4.py", line 35, in mountainsort4
+    MS4.sort()
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 673, in sort
+    prepare_timeseries_hdf5_from_recording(self._recording,temp_hdf5_path,chunk_size=hdf5_chunk_size,padding=hdf5_padding)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 563, in prepare_timeseries_hdf5_from_recording
+    f.create_dataset('part-{}-{}'.format(m,j),data=padded_chunk[m,:].ravel())
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/group.py", line 148, in create_dataset
+    dsid = dataset.make_new_dset(group, shape, dtype, data, name, **kwds)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/dataset.py", line 140, in make_new_dset
+    dset_id.write(h5s.ALL, h5s.ALL, data)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5d.pyx", line 232, in h5py.h5d.DatasetID.write
+  File "h5py/_proxy.pyx", line 114, in h5py._proxy.dset_rw
+OSError: [Errno 28] Can't write data (file write failed: time = Mon Mar 15 14:08:53 2021
+, filename = '/tmp/tmpt20xk511/timeseries.hdf5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 0x55880adc0100, total write size = 1166144, bytes this sub-write = 1166144, bytes actually written = 18446744073709551615, offset = 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 207, in <module>
+    sorting = sort_recording(recording=recording_f, file_name=file_name)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 45, in sort_recording
+    sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 342, in run_mountainsort4
+    return run_sorter('mountainsort4', *args, **kwargs)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 93, in run_sorter
+    sorter.run(raise_error=raise_error, parallel=parallel, n_jobs=n_jobs, joblib_backend=joblib_backend)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
+    raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
+spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: [Errno 28] Can't write data (file write failed: time = Mon Mar 15 14:08:53 2021
+, filename = '/tmp/tmpt20xk511/timeseries.hdf5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 0x55880adc0100, total write size = 1166144, bytes this sub-write = 1166144, bytes actually written = 18446744073709551615, offset = 0). You can inspect the runtime trace in the mountainsort4.log of the output folder.'
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 204, in <module>
+    f.close()
+AttributeError: 'dict' object has no attribute 'close'
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 204, in <module>
+    f.close()
+AttributeError: 'dict' object has no attribute 'close'
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 209, in <module>
+    recording = extract_recording(ts, num_channels)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 27, in extract_recording
+    recording = se.NumpyRecordingExtractor(timeseries=timeseries, geom=geom, sampling_frequency=sampling_frequency)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikeextractors/extractors/numpyextractors/numpyextractors.py", line 40, in __init__
+    self.set_channel_locations(self._geom)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikeextractors/recordingextractor.py", line 286, in set_channel_locations
+    raise ValueError("channel_ids and locations must have same length")
+ValueError: channel_ids and locations must have same length
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 209, in <module>
+    recording = extract_recording(ts, num_channels)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 27, in extract_recording
+    recording = se.NumpyRecordingExtractor(timeseries=timeseries, geom=geom, sampling_frequency=sampling_frequency)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikeextractors/extractors/numpyextractors/numpyextractors.py", line 40, in __init__
+    self.set_channel_locations(self._geom)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikeextractors/recordingextractor.py", line 286, in set_channel_locations
+    raise ValueError("channel_ids and locations must have same length")
+ValueError: channel_ids and locations must have same length
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 158, in run
+    self._run(recording, self.output_folders[i])
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/mountainsort4/mountainsort4.py", line 107, in _run
+    sorting = ml_ms4alg.mountainsort4(
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/mountainsort4.py", line 35, in mountainsort4
+    MS4.sort()
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 698, in sort
+    tmp_dask = dask.delayed(run_phase1_sort)(NS)
+AttributeError: module 'dask' has no attribute 'delayed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 220, in <module>
+    sorting = sort_recording(recording_f, file_name)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 45, in sort_recording
+    sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 342, in run_mountainsort4
+    return run_sorter('mountainsort4', *args, **kwargs)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 93, in run_sorter
+    sorter.run(raise_error=raise_error, parallel=parallel, n_jobs=n_jobs, joblib_backend=joblib_backend)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
+    raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
+spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: module 'dask' has no attribute 'delayed'. You can inspect the runtime trace in the mountainsort4.log of the output folder.'
+ERROR:root:1_04122016_kurosawacoppola_pre
+Traceback (most recent call last):
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 158, in run
+    self._run(recording, self.output_folders[i])
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/mountainsort4/mountainsort4.py", line 107, in _run
+    sorting = ml_ms4alg.mountainsort4(
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/mountainsort4.py", line 35, in mountainsort4
+    MS4.sort()
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 698, in sort
+    tmp_dask = dask.delayed(run_phase1_sort)(NS)
+AttributeError: module 'dask' has no attribute 'delayed'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 220, in <module>
+    sorting = sort_recording(recording_f, file_name)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 45, in sort_recording
+    sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 342, in run_mountainsort4
+    return run_sorter('mountainsort4', *args, **kwargs)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 93, in run_sorter
+    sorter.run(raise_error=raise_error, parallel=parallel, n_jobs=n_jobs, joblib_backend=joblib_backend)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
+    raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
+spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: module 'dask' has no attribute 'delayed'. You can inspect the runtime trace in the mountainsort4.log of the output folder.'

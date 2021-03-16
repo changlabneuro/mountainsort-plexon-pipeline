@@ -125,3 +125,36 @@ Traceback (most recent call last):
   File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
     raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
 spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: module 'dask' has no attribute 'delayed'. You can inspect the runtime trace in the mountainsort4.log of the output folder.'
+ERROR:root:acc_05122016_KurosawaCoppola
+Traceback (most recent call last):
+  File "extract_sort_prabahas_mac.py", line 227, in <module>
+    metrics.to_pickle("waveform_visualization/" + file_name + "/metrics_results.pkl")
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/core/generic.py", line 2676, in to_pickle
+    to_pickle(self, path, compression=compression, protocol=protocol)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/pickle.py", line 83, in to_pickle
+    f, fh = get_handle(fp_or_buf, "wb", compression=compression, is_text=False)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/common.py", line 499, in get_handle
+    f = open(path_or_buf, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'waveform_visualization/acc_05122016_KurosawaCoppola/metrics_results.pkl'
+ERROR:root:1_Hitch_01132017_OT
+Traceback (most recent call last):
+  File "extract_sort_prabahas_mac.py", line 227, in <module>
+    metrics.to_pickle("waveform_visualization/" + file_name + "/metrics_results.pkl")
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/core/generic.py", line 2676, in to_pickle
+    to_pickle(self, path, compression=compression, protocol=protocol)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/pickle.py", line 83, in to_pickle
+    f, fh = get_handle(fp_or_buf, "wb", compression=compression, is_text=False)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/common.py", line 499, in get_handle
+    f = open(path_or_buf, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'waveform_visualization/1_Hitch_01132017_OT/metrics_results.pkl'
+ERROR:root:1_Hitch_01132017_OT
+Traceback (most recent call last):
+  File "extract_sort_prabahas_mac.py", line 227, in <module>
+    metrics.to_pickle("waveform_visualization/" + file_name + "/metrics_results.pkl")
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/core/generic.py", line 2676, in to_pickle
+    to_pickle(self, path, compression=compression, protocol=protocol)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/pickle.py", line 83, in to_pickle
+    f, fh = get_handle(fp_or_buf, "wb", compression=compression, is_text=False)
+  File "/Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/pandas/io/common.py", line 499, in get_handle
+    f = open(path_or_buf, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'waveform_visualization/1_Hitch_01132017_OT/metrics_results.pkl'

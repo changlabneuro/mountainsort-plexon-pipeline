@@ -209,8 +209,7 @@ if __name__ == "__main__":
         is_h5_file = False  
       ts = np.array(f['mat'])
       ts = maybe_transpose(ts)
-      if is_h5_file:
-        f.close()
+      del f
       num_channels = ts.shape[0]
       print('Extracting recording with {} channels ..'.format(num_channels))
       recording = extract_recording(ts, num_channels)
@@ -220,11 +219,11 @@ if __name__ == "__main__":
       sorting = sort_recording(recording_f, file_name)
       print('Sorted.')
       wf, max_chan, templates, metrics = postprocess_recording(recording, sorting, file_name)
-      output_dir = "waveform_visualization/"
+      output_dir = "waveform_postprocessing/"
       if not os.path.exists(output_dir):
         os.mkdir(output_dir)
-      visualize_units(recording, recording_f, sorting, wf, templates, max_chan, num_channels, file_name)
-      metrics.to_pickle("waveform_visualization/" + file_name + "/metrics_results.pkl")
+      # visualize_units(recording, recording_f, sorting, wf, templates, max_chan, num_channels, file_name)
+      metrics.to_pickle("waveform_postprocessing/" + file_name + "_metrics_results.pkl")
       with open('pl2_used.txt', 'a') as f:
         f.write('%s\n' % file_name)
       del wf, max_chan, templates

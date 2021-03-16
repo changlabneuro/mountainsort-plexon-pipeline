@@ -125,3 +125,58 @@ Traceback (most recent call last):
   File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
     raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
 spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: module 'dask' has no attribute 'delayed'. You can inspect the runtime trace in the mountainsort4.log of the output folder.'
+ERROR:root:1_Hitch_01132017_OT
+Traceback (most recent call last):
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 563, in prepare_timeseries_hdf5_from_recording
+    f.create_dataset('part-{}-{}'.format(m,j),data=padded_chunk[m,:].ravel())
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/group.py", line 148, in create_dataset
+    dsid = dataset.make_new_dset(group, shape, dtype, data, name, **kwds)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/dataset.py", line 140, in make_new_dset
+    dset_id.write(h5s.ALL, h5s.ALL, data)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5d.pyx", line 232, in h5py.h5d.DatasetID.write
+  File "h5py/_proxy.pyx", line 114, in h5py._proxy.dset_rw
+OSError: [Errno 28] Can't write data (file write failed: time = Mon Mar 15 15:48:44 2021
+, filename = '/tmp/tmpbwwulp7q/timeseries.hdf5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 0x56352a051050, total write size = 5467328, bytes this sub-write = 5467328, bytes actually written = 18446744073709551615, offset = 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 158, in run
+    self._run(recording, self.output_folders[i])
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/mountainsort4/mountainsort4.py", line 107, in _run
+    sorting = ml_ms4alg.mountainsort4(
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/mountainsort4.py", line 35, in mountainsort4
+    MS4.sort()
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 673, in sort
+    prepare_timeseries_hdf5_from_recording(self._recording,temp_hdf5_path,chunk_size=hdf5_chunk_size,padding=hdf5_padding)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/ml_ms4alg/ms4alg.py", line 563, in prepare_timeseries_hdf5_from_recording
+    f.create_dataset('part-{}-{}'.format(m,j),data=padded_chunk[m,:].ravel())
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/files.py", line 493, in __exit__
+    self.close()
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/h5py/_hl/files.py", line 475, in close
+    h5i.dec_ref(id_)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5i.pyx", line 153, in h5py.h5i.dec_ref
+RuntimeError: Dirty entry flush destroy failed (file write failed: time = Mon Mar 15 15:48:44 2021
+, filename = '/tmp/tmpbwwulp7q/timeseries.hdf5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 0x563556dd96c8, total write size = 9768, bytes this sub-write = 9768, bytes actually written = 18446744073709551615, offset = 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 228, in <module>
+    sorting = sort_recording(recording_f, file_name)
+  File "/home/chang/Repositories/mountainsort-plexon-pipeline/extract_sort_dunham.py", line 45, in sort_recording
+    sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 342, in run_mountainsort4
+    return run_sorter('mountainsort4', *args, **kwargs)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/sorterlist.py", line 93, in run_sorter
+    sorter.run(raise_error=raise_error, parallel=parallel, n_jobs=n_jobs, joblib_backend=joblib_backend)
+  File "/home/chang/anaconda3/envs/automated-sorting-ml4/lib/python3.9/site-packages/spikesorters/basesorter.py", line 169, in run
+    raise SpikeSortingError(f"Spike sorting failed: {err}. You can inspect the runtime trace in "
+spikesorters.sorter_tools.SpikeSortingError: Spike sorting failed: Dirty entry flush destroy failed (file write failed: time = Mon Mar 15 15:48:44 2021
+, filename = '/tmp/tmpbwwulp7q/timeseries.hdf5', file descriptor = 6, errno = 28, error message = 'No space left on device', buf = 0x563556dd96c8, total write size = 9768, bytes this sub-write = 9768, bytes actually written = 18446744073709551615, offset = 0). You can inspect the runtime trace in the mountainsort4.log of the output folder.'

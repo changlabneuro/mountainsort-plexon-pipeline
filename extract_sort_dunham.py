@@ -41,7 +41,7 @@ def sort_recording(recording, file_name):
   default_ms4_params = ss.Mountainsort4Sorter.default_params()
   default_ms4_params['detect_threshold'] = 4
   default_ms4_params['curation'] = False
-  default_ms4_params['filter'] = False
+  default_ms4_params['filter'] = True
   sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
   return sorting
 
@@ -91,8 +91,14 @@ def visualize_units(recording, recording_f, sorting, wf, templates, max_chan, nu
       normalized_templates.append(preprocessing.normalize(np.array(templates)[i][:,:]))
       axe[1].plot(normalized_templates[i][max_chan[i]].T, color=color[i], label= i + 2)
   sw.plot_rasters(sorting, ax = axe[2])
+  
+
   # Calculate pca scores with 3 component analysis and plot for multichannel recordings or use pre built one for single channel ones
   # Comment this section out and adjust the figure axes if taking to long to compute or not needed
+  
+
+
+  '''
   if num_channels > 1:
     pca_scores = st.postprocessing.compute_unit_pca_scores(recording, sorting, unit_ids = list(range(1, len(wf) + 1)), channel_ids = max_chan, n_comp=3, verbose=True)
     for i in range(len(wf)):
@@ -175,6 +181,7 @@ def visualize_units(recording, recording_f, sorting, wf, templates, max_chan, nu
     fig.suptitle("File name: " + file_name + '\nChannel: ' + str(max_chan[idx] + 1).zfill(2) + '\nUnit: ' + str(idx + 1).zfill(2) + '\nFiring Rate: ' + str(round(metrics.loc[idx+1]['firing_rate'], 3)) + ' ISI Violation: ' + str(round(metrics.loc[idx+1]['isi_violation'], 3)) + ' snr: ' + str(round(metrics.loc[idx+1]['snr'], 3)))
     fig.savefig(output_dir + file_name + '_ch' + str(max_chan[idx] + 1).zfill(2) + '_u'+ str(idx+1).zfill(2) + '.png', dpi=500)
     plt.close()
+    '''
 
 def maybe_transpose(ts):
   if ts.shape[0] > ts.shape[1]:
@@ -214,7 +221,8 @@ if __name__ == "__main__":
       print('Extracting recording with {} channels ..'.format(num_channels))
       recording = extract_recording(ts, num_channels)
       print('Extracted recording. Preprocessing ..')
-      recording_f = preprocess_recording(recording, 300, 6000)
+      recording_f = recording
+      # recording_f = preprocess_recording(recording_f, 300, 6000)
       print('Preprocessed. Sorting ..')
       sorting = sort_recording(recording_f, file_name)
       print('Sorted.')

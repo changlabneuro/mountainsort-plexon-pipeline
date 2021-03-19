@@ -1,0 +1,1 @@
+{"duration": 0.07305717468261719, "input_args": {"cluster_id": "8", "n_spikes_waveforms": "100", "batch_size_waveforms": "10", "current_filter": "'high_pass'"}}

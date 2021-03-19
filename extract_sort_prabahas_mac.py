@@ -39,7 +39,7 @@ def sort_recording(recording, file_name):
   if not os.path.exists(output_dir):
     os.mkdir(output_dir)
   default_ms4_params = ss.Mountainsort4Sorter.default_params()
-  default_ms4_params['detect_threshold'] = 4
+  default_ms4_params['detect_threshold'] = 3.3
   default_ms4_params['curation'] = False
   default_ms4_params['filter'] = True
   sorting = ss.run_mountainsort4(recording=recording, **default_ms4_params, output_folder=output_dir+file_name)
@@ -184,15 +184,15 @@ def maybe_transpose(ts):
 
 if __name__ == "__main__":
   # directory_in_str = input("Input directory location here")
-  directory_in_str = "/Users/prabaha/Box/NeuralData/DictatorGamee_2019NN/test"
+  directory_in_str = "/Users/prabaha/Box/NeuralData/DictatorGamee_2019NN/generated_neural_data"
   logging.basicConfig(filename='sorting_error.log', level=logging.WARNING)
   directory = os.fsencode(directory_in_str)
   sessions_sorted = []
-  if not os.path.exists('pl2_used.txt'):
-    open('pl2_used.txt', 'w').close()
-  with open('pl2_used.txt', 'r') as f:
-    for line in f:
-        sessions_sorted.append(line[:-1])
+  #if not os.path.exists('pl2_used.txt'):
+  #  open('pl2_used.txt', 'w').close()
+  #with open('pl2_used.txt', 'r') as f:
+  #  for line in f:
+  #      sessions_sorted.append(line[:-1])
   for file in os.listdir(directory):
     try:
       file_name = os.fsdecode(file)

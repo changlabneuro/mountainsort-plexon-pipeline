@@ -1,0 +1,586 @@
+[90m17:37:59.793 [D] context:80           Create cache directory `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy`.[0m
+[90m17:37:59.793 [D] context:80           Create cache directory `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy`.[0m
+[90m17:37:59.851 [D] context:100          Initialize joblib cache dir at `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy`.[0m
+[90m17:37:59.851 [D] context:100          Initialize joblib cache dir at `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy`.[0m
+[90m17:37:59.851 [D] context:101          Reducing the size of the cache if needed.[0m
+[90m17:37:59.851 [D] context:101          Reducing the size of the cache if needed.[0m
+[90m17:37:59.852 [D] base:102             Add filter `high_pass`.[0m
+[90m17:37:59.852 [D] base:102             Add filter `high_pass`.[0m
+[90m17:37:59.852 [D] config:70            Creating default phy config file at `/Users/prabaha/.phy/phy_config.py`.[0m
+[90m17:37:59.852 [D] config:70            Creating default phy config file at `/Users/prabaha/.phy/phy_config.py`.[0m
+[90m17:37:59.852 [D] config:31            Load config file `/Users/prabaha/.phy/phy_config.py`.[0m
+[90m17:37:59.852 [D] config:31            Load config file `/Users/prabaha/.phy/phy_config.py`.[0m
+[90m17:37:59.853 [D] plugin:145           Loading 0 plugins.[0m
+[90m17:37:59.853 [D] plugin:145           Loading 0 plugins.[0m
+[90m17:37:59.855 [D] context:209          The file `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/new_cluster_id.pkl` doesn't exist.[0m
+[90m17:37:59.855 [D] context:209          The file `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/new_cluster_id.pkl` doesn't exist.[0m
+[90m17:37:59.855 [D] context:209          The file `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/spikes_per_cluster.pkl` doesn't exist.[0m
+[90m17:37:59.855 [D] context:209          The file `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/spikes_per_cluster.pkl` doesn't exist.[0m
+[90m17:37:59.855 [D] clustering:237       Recompute spikes_per_cluster manually: this might take a while.[0m
+[90m17:37:59.855 [D] clustering:237       Recompute spikes_per_cluster manually: this might take a while.[0m
+[90m17:37:59.856 [D] context:185          Save data to `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/spikes_per_cluster.pkl`.[0m
+[90m17:37:59.856 [D] context:185          Save data to `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/spikes_per_cluster.pkl`.[0m
+[90m17:37:59.858 [D] gui:463              Creating GUI.[0m
+[90m17:37:59.858 [D] gui:463              Creating GUI.[0m
+[90m17:38:00.468 [D] state:178            The GUI state file `/Users/prabaha/.phy/TemplateGUI/state.json` doesn't exist, creating a default one...[0m
+[90m17:38:00.468 [D] state:178            The GUI state file `/Users/prabaha/.phy/TemplateGUI/state.json` doesn't exist, creating a default one...[0m
+[0m17:38:00.469 [I] state:180            Copied /Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/phy/apps/template/static/state.json to /Users/prabaha/.phy/TemplateGUI/state.json.[0m
+[0m17:38:00.469 [I] state:180            Copied /Users/prabaha/anaconda3/envs/mountainsort_2021/lib/python3.6/site-packages/phy/apps/template/static/state.json to /Users/prabaha/.phy/TemplateGUI/state.json.[0m
+[90m17:38:00.469 [D] state:46             Load /Users/prabaha/.phy/TemplateGUI/state.json for GUIState.[0m
+[90m17:38:00.469 [D] state:46             Load /Users/prabaha/.phy/TemplateGUI/state.json for GUIState.[0m
+[90m17:38:00.736 [D] gui:718              Add view ClusterView to GUI.[0m
+[90m17:38:00.736 [D] gui:718              Add view ClusterView to GUI.[0m
+[90m17:38:00.988 [D] gui:718              Add view SimilarityView to GUI.[0m
+[90m17:38:00.988 [D] gui:718              Add view SimilarityView to GUI.[0m
+[90m17:38:01.030 [D] gui:718              Add view WaveformView to GUI.[0m
+[90m17:38:01.030 [D] gui:718              Add view WaveformView to GUI.[0m
+[90m17:38:01.183 [D] base:321             Set state for WaveformView.[0m
+[90m17:38:01.183 [D] base:321             Set state for WaveformView.[0m
+[90m17:38:01.194 [D] gui:718              Add view CorrelogramView to GUI.[0m
+[90m17:38:01.194 [D] gui:718              Add view CorrelogramView to GUI.[0m
+[90m17:38:01.198 [D] base:321             Set state for CorrelogramView.[0m
+[90m17:38:01.198 [D] base:321             Set state for CorrelogramView.[0m
+[90m17:38:01.219 [D] gui:718              Add view ISIView to GUI.[0m
+[90m17:38:01.219 [D] gui:718              Add view ISIView to GUI.[0m
+[90m17:38:01.222 [D] base:321             Set state for ISIView.[0m
+[90m17:38:01.222 [D] base:321             Set state for ISIView.[0m
+[90m17:38:01.235 [D] gui:718              Add view FeatureView to GUI.[0m
+[90m17:38:01.235 [D] gui:718              Add view FeatureView to GUI.[0m
+[90m17:38:01.238 [D] base:321             Set state for FeatureView.[0m
+[90m17:38:01.238 [D] base:321             Set state for FeatureView.[0m
+[90m17:38:01.258 [D] gui:718              Add view AmplitudeView to GUI.[0m
+[90m17:38:01.258 [D] gui:718              Add view AmplitudeView to GUI.[0m
+[90m17:38:01.261 [D] base:321             Set state for AmplitudeView.[0m
+[90m17:38:01.261 [D] base:321             Set state for AmplitudeView.[0m
+[90m17:38:01.283 [D] gui:718              Add view FiringRateView to GUI.[0m
+[90m17:38:01.283 [D] gui:718              Add view FiringRateView to GUI.[0m
+[90m17:38:01.286 [D] base:321             Set state for FiringRateView.[0m
+[90m17:38:01.286 [D] base:321             Set state for FiringRateView.[0m
+[90m17:38:01.306 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:01.306 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:01.309 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:01.309 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:01.317 [D] gui:718              Add view TraceView to GUI.[0m
+[90m17:38:01.317 [D] gui:718              Add view TraceView to GUI.[0m
+[90m17:38:01.320 [D] base:321             Set state for TraceView.[0m
+[90m17:38:01.320 [D] base:321             Set state for TraceView.[0m
+[90m17:38:01.320 [D] base:477             Set color scheme to depth.[0m
+[90m17:38:01.320 [D] base:477             Set color scheme to depth.[0m
+[90m17:38:01.325 [D] base:1564            Adding default color schemes to TraceView.[0m
+[90m17:38:01.325 [D] base:1564            Adding default color schemes to TraceView.[0m
+[90m17:38:01.346 [D] gui:718              Add view ProbeView to GUI.[0m
+[90m17:38:01.346 [D] gui:718              Add view ProbeView to GUI.[0m
+[90m17:38:01.349 [D] base:321             Set state for ProbeView.[0m
+[90m17:38:01.349 [D] base:321             Set state for ProbeView.[0m
+[33m17:38:01.350 [W] gui:671              Could not create view TemplateFeatureView.[0m
+[33m17:38:01.350 [W] gui:671              Could not create view TemplateFeatureView.[0m
+[90m17:38:01.367 [D] gui:718              Add view ClusterScatterView to GUI.[0m
+[90m17:38:01.367 [D] gui:718              Add view ClusterScatterView to GUI.[0m
+[90m17:38:01.370 [D] base:321             Set state for ClusterScatterView.[0m
+[90m17:38:01.370 [D] base:321             Set state for ClusterScatterView.[0m
+[90m17:38:01.370 [D] base:477             Set color scheme to firing_rate.[0m
+[90m17:38:01.370 [D] base:477             Set color scheme to firing_rate.[0m
+[90m17:38:01.371 [D] base:1564            Adding default color schemes to ClusterScatterView.[0m
+[90m17:38:01.371 [D] base:1564            Adding default color schemes to ClusterScatterView.[0m
+[90m17:38:01.381 [D] gui:519              Load the geometry state.[0m
+[90m17:38:01.381 [D] gui:519              Load the geometry state.[0m
+[90m17:38:17.802 [D] supervisor:812       Clusters selected: [8] (5)[0m
+[90m17:38:17.802 [D] supervisor:812       Clusters selected: [8] (5)[0m
+[90m17:38:55.962 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:55.962 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:55.966 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:55.966 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.096 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.096 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.100 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.100 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.280 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.280 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.282 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.282 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.412 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.412 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.414 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.414 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.932 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.932 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:56.936 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:56.936 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.420 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.420 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.424 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.424 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.651 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.651 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.654 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.654 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.796 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.796 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.800 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.800 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.940 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.940 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:57.943 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:57.943 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.063 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.063 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.066 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.066 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.204 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.204 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.207 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.207 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.312 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.312 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.315 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.315 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.448 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.448 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.451 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.451 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.584 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.584 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.586 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.586 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.708 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.708 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.710 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.710 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.960 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.960 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:58.963 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:58.963 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.100 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.100 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.104 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.104 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.540 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.540 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.543 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.543 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.702 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.702 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.704 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.704 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.964 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.964 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:38:59.967 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:38:59.967 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:00.108 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:00.108 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:00.111 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:00.111 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:00.252 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:00.252 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:00.254 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:00.254 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.325 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.325 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.329 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.329 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.517 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.517 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.519 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.519 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.641 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.641 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.643 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.643 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.788 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.788 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.791 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.791 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.916 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.916 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:10.919 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:10.919 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.045 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.045 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.047 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.047 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.172 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.172 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.175 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.175 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.421 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.421 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.423 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.423 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.581 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.581 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:11.584 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:11.584 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.164 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.164 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.169 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.169 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.247 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.247 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.250 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.250 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.332 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.332 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.336 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.336 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.415 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.415 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.418 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.418 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.500 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.500 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.504 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.504 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.584 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.584 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.586 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.586 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.667 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.667 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.669 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.669 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.751 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.751 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:12.754 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:12.754 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:16.589 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:16.589 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:16.592 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:16.592 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:16.887 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:16.887 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:16.890 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:16.890 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.470 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.470 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.474 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.474 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.555 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.555 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.557 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.557 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.640 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.640 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.643 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.643 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.723 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.723 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.726 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.726 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.806 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.806 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.809 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.809 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.891 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.891 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.895 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.895 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.974 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.974 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:17.976 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:17.976 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.058 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.058 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.061 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.061 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.141 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.141 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.144 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.144 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.226 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.226 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.228 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.228 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.309 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.309 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.311 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.311 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.393 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.393 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.396 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.396 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.476 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.476 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.479 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.479 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.560 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.560 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.562 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.562 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.642 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.642 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.645 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.645 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.726 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.726 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.729 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.729 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.810 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.810 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.813 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.813 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.892 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.892 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.895 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.895 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.976 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.976 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:18.979 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:18.979 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.060 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.060 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.063 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.063 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.142 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.142 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.144 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.144 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.228 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.228 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.231 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.231 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.311 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.311 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.314 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.314 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.395 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.395 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.398 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.398 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.478 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.478 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.481 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.481 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.562 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.562 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.565 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.565 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.646 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.646 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.649 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.649 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.731 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.731 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.735 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.735 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.815 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.815 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.817 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.817 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.900 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.900 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.903 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.903 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.983 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.983 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:19.987 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:19.987 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.067 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.067 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.070 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.070 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.151 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.151 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.154 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.154 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.235 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.235 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.238 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.238 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.320 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.320 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.322 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.322 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:20.999 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:20.999 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.002 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.002 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.582 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.582 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.585 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.585 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.665 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.665 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.668 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.668 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.749 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.749 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.752 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.752 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.833 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.833 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.836 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.836 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.917 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.917 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:21.920 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:21.920 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.001 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.001 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.005 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.005 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.086 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.086 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.089 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.089 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.169 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.169 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.172 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.172 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.253 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.253 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.256 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.256 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.337 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.337 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.340 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.340 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.421 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.421 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.425 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.425 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.505 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.505 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.508 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.508 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.589 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.589 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.592 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.592 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.673 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.673 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.676 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.676 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.758 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.758 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.761 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.761 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.841 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.841 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.845 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.845 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.926 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.926 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:22.928 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:22.928 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.008 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.008 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.011 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.011 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.092 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.092 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.095 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.095 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.176 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.176 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.179 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.179 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.259 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.259 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.262 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.262 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.342 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.342 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.346 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.346 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.426 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.426 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.428 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.428 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.509 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.509 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:23.512 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:23.512 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:24.661 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:24.661 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:24.664 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:24.664 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.245 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.245 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.248 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.248 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.330 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.330 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.332 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.332 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.414 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.414 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.417 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.417 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.498 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.498 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.501 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.501 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.581 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.581 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.584 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.584 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.666 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.666 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.668 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.668 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.749 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.749 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.752 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.752 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.833 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.833 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.836 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.836 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.918 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.918 [D] trace:367            Redraw the entire trace view.[0m
+[90m17:39:25.921 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:25.921 [D] trace:332            Redraw the entire trace view.[0m
+[90m17:39:26.901 [D] state:171            Update GUI state for ClusterView[0m
+[90m17:39:26.901 [D] state:171            Update GUI state for ClusterView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for WaveformView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for WaveformView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for CorrelogramView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for CorrelogramView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for ISIView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for ISIView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for FeatureView[0m
+[90m17:39:26.902 [D] state:171            Update GUI state for FeatureView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for AmplitudeView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for AmplitudeView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for FiringRateView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for FiringRateView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for TraceView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for TraceView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for ProbeView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for ProbeView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for ClusterScatterView[0m
+[90m17:39:26.903 [D] state:171            Update GUI state for ClusterScatterView[0m
+[90m17:39:26.904 [D] context:138          Save memcache for `phy.apps.base._get_mean_waveforms`.[0m
+[90m17:39:26.904 [D] context:138          Save memcache for `phy.apps.base._get_mean_waveforms`.[0m
+[90m17:39:26.904 [D] context:138          Save memcache for `phy.apps.base._get_template_waveforms`.[0m
+[90m17:39:26.904 [D] context:138          Save memcache for `phy.apps.base._get_template_waveforms`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_mean_spike_template_amplitudes`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_mean_spike_template_amplitudes`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_template_counts`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_template_counts`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_template_for_cluster`.[0m
+[90m17:39:26.905 [D] context:138          Save memcache for `phy.apps.base.get_template_for_cluster`.[0m
+[90m17:39:26.906 [D] context:138          Save memcache for `phy.apps.template.gui.get_template_amplitude`.[0m
+[90m17:39:26.906 [D] context:138          Save memcache for `phy.apps.template.gui.get_template_amplitude`.[0m
+[90m17:39:26.906 [D] context:138          Save memcache for `phy.apps.base.get_cluster_amplitude`.[0m
+[90m17:39:26.906 [D] context:138          Save memcache for `phy.apps.base.get_cluster_amplitude`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.base.get_mean_firing_rate`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.base.get_mean_firing_rate`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.base.get_best_channel`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.base.get_best_channel`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.template.gui.get_best_channels`.[0m
+[90m17:39:26.907 [D] context:138          Save memcache for `phy.apps.template.gui.get_best_channels`.[0m
+[90m17:39:26.908 [D] context:138          Save memcache for `phy.apps.base.get_channel_shank`.[0m
+[90m17:39:26.908 [D] context:138          Save memcache for `phy.apps.base.get_channel_shank`.[0m
+[90m17:39:26.908 [D] context:138          Save memcache for `phy.apps.base.get_probe_depth`.[0m
+[90m17:39:26.908 [D] context:138          Save memcache for `phy.apps.base.get_probe_depth`.[0m
+[90m17:39:26.909 [D] context:138          Save memcache for `phy.apps.base.peak_channel_similarity`.[0m
+[90m17:39:26.909 [D] context:138          Save memcache for `phy.apps.base.peak_channel_similarity`.[0m
+[90m17:39:26.909 [D] gui:600              Save the geometry state.[0m
+[90m17:39:26.909 [D] gui:600              Save the geometry state.[0m
+[90m17:39:26.909 [D] state:218            Save global GUI state to `/Users/prabaha/.phy/TemplateGUI/state.json`.[0m
+[90m17:39:26.909 [D] state:218            Save global GUI state to `/Users/prabaha/.phy/TemplateGUI/state.json`.[0m
+[90m17:39:26.912 [D] state:232            Save local GUI state to `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/state.json`.[0m
+[90m17:39:26.912 [D] state:232            Save local GUI state to `/Users/prabaha/repositories/mountainsort-plexon-pipeline/phy/.phy/state.json`.[0m
+[90m17:39:26.926 [D] __init__:87          Stop capturing exceptions.[0m
+[90m17:39:26.926 [D] __init__:87          Stop capturing exceptions.[0m
